@@ -1,0 +1,10 @@
+from snakemake.utils import min_version
+min_version("6.0")
+
+module other_workflow:
+    snakefile: "rule_a.snake"
+
+rule all:
+    input: ["la_1_lb_2.tsv"]
+
+use rule rule_a from other_workflow as other_rule_a

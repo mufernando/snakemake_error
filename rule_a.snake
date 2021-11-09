@@ -1,0 +1,5 @@
+rule a:
+    input: "la_{a}_lb_{b}.txt"
+    output: "la_{a}_lb_{b}.tsv"
+    shell:
+        "cp {input} {output}"

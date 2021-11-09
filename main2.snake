@@ -1,0 +1,11 @@
+from snakemake.utils import min_version
+min_version("6.0")
+
+rule all:
+    input: ["la_1_lb_2.tsv"]
+
+rule a:
+    input: "la_{a}_lb_{b}.txt"
+    output: "la_{a}_lb_{b}.tsv"
+    shell:
+        "cp {input} {output}"
